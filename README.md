@@ -5,4 +5,5 @@ Design Profile
 잘 부탁드립니다.
 
 1일차 - 프로토타이핑 (xd이용), html 뼈대설정
+2일차 - html 섹셔닝, css효과 및 js(fadeInUp 애니메이션, 로딩바, 타이핑애니메이션)
 ## 
