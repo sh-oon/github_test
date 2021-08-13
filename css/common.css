@@ -1,1 +1,132 @@
-* {margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/* align, border, input */
+img, fieldset, a {border: none;}
+img{vertical-align: middle;}
+table, thead, tbody, tfoot {border-collapse: collapse; border-spacing: 0; border: none;}
+ul,ol,li {list-style: none;}
+address, em{font-style: normal;}
+input,select, textarea, button, form img, lable {vertical-align: middle;}
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+a {text-decoration: none; color: #000;}
+
+.left {float: left;}
+.clear::after {content: ''; display: block; clear: both;}
+/* //초기화 */
+
+/* sectioning */
+#header {width: 100%; height: 50px;}
+#introduce {width: 100%; height: 1080px;position: relative;}
+#career {width: 100%; height: 1080px;}
+#portfolio {width: 100%; height: 1080px;}
+#footer {width: 100%; height: 100px;}
+
+.modal {display: none;}
+
+
+
+/* header(nav) */
+#header {width: 100%; height: 50px; position: fixed; border-bottom: 1px solid; top: 0; left: 0;}
+.gnb {width: 1200px; height: 100%; margin: 0 auto;}
+.main {display: block; width: 100%; height: 100%;}
+.menu {display: block; width: 300px; height: 100%; text-align: center; font-size: 14px; box-sizing: border-box; line-height: 50px; border-left: 1px solid;}
+.menu:last-child {border-right: 1px solid;}
+/* fadeInUp/ 스크롤 감지하여 나타나는 모션 */
+.skill {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+/* introduce */
+.typo {position: absolute; width: 1000px; height: 500px; top: 290px; left: 400px;}
+.t-text {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+  text-align: justify;
+  line-height: 400px;
+  display: none;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+/* career */
+.history {width: 1200px; height: 540px; margin: 0 auto;}
+.skills {width: 1200px; height: 540px; margin: 0 auto; position: relative;}
+.skills h2 {display: block; width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
+.skills dl {display: block; width: 100%; height: 340px; margin-top: 50px;}
+.skills dt {display: block; width: 30%; height: 100%; float: left;}
+.skills dd {display: block; width: 70%; height: 100%; float: left;}
+.skills dd ul {display: block; width: 100%; height: 100%;}
+.skill {display: block; width: 100%; height: 20%; line-height: 68px;}
+.skill h3 {display: block; width: 20%; height: 100%; float: left;}
+
+
+/* 로딩바 */
+.progressArea {
+  float: left;
+  width: 80%;
+  height: 100%;
+}
+.progress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  top: calc(50% - 15px);
+  background-color: transparent;
+}
+.bar {
+  background-color: blue;
+  width: 0;
+  height: 100%;
+}
+.label {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 15px;
+}
