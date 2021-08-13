@@ -1,16 +1,6 @@
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+h1, h2, h3, a, dl, dt, dd, ol, ul, li, footer, header
+{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -40,15 +30,7 @@ q:before, q:after {
 /* align, border, input */
 img, fieldset, a {border: none;}
 img{vertical-align: middle;}
-table, thead, tbody, tfoot {border-collapse: collapse; border-spacing: 0; border: none;}
 ul,ol,li {list-style: none;}
-address, em{font-style: normal;}
-input,select, textarea, button, form img, lable {vertical-align: middle;}
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
 a {text-decoration: none; color: #000;}
 
 .left {float: left;}
@@ -60,6 +42,7 @@ a {text-decoration: none; color: #000;}
 #introduce {width: 100%; height: 1080px;position: relative;}
 #career {width: 100%; height: 1080px;}
 #portfolio {width: 100%; height: 1080px;}
+#contact {width: 100%; height: 500px;}
 #footer {width: 100%; height: 100px;}
 
 .modal {display: none;}
@@ -130,3 +113,23 @@ a {text-decoration: none; color: #000;}
   letter-spacing: 2px;
   line-height: 15px;
 }
+
+/* portfolio */
+#portfolio h2 {display: block; width: 1200px; height: 50px; text-align: center; line-height: 50px; margin: 0 auto;}
+.p_wrap {width: 1200px; height: 1030px; margin: 0 auto;}
+.p_con {width: 50%; height: 500px; float: left; background-color: rgba(0,0,0,0);}
+.p_con:hover {background-color: rgba(0,0,0,0.6); animation: fadein .2s;}
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.p_link {display: block; width: 100%; height: 100%;}
+
+/* contact */
+.contact_wrap {width: 1200px; height: 500px; position: relative; margin: 0 auto;}
+.contact_wrap h2 {display: block; width: 20%; height: 100%; float: left; border: 1px solid; box-sizing: border-box; line-height: 500px; text-align: center;}
+.con_method {width: 80%; height: 100%; float: left;}
