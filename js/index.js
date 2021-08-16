@@ -21,37 +21,100 @@ $(function(){
 
 $(function(){
 
-  //함수 정의
-  function move(){
-    var $container = $('.progressArea');
-    var $bar = $('.bar');
-    var $lbl = $('.label');
-
-    var w = parseInt($lbl.text());
-    var play = setInterval(status, 20);
-    var duration1 = 500; //시간1
-    var duration2 = 1000; //시간2
-
+  var skillScroe = [80,80,70,60,40]
+  var $hb = $('.html_bar')
+  var $cb = $('.css_bar')
+  var $qb = $('.jquery_bar')
+  var $sb = $('.js_bar')
+  var $vb = $('.vue_bar')
+  var $sh = $('.sh');
+  var $sc = $('.sc');
+  var $sq = $('.sq');
+  var $ss = $('.ss');
+  var $sv = $('.sv');
+  
+  //함수 정의(html)
+  function movesh(){
     //모션 실행 함수
+    var hw = parseInt($sh.text());
+    var play = setInterval(status, 20);
     function status(){
-      if(w<100){
-        w++;
-        $bar.css({width:w+'%'});
-        $lbl.text(w+'%');
+      if(hw<skillScroe[0]){
+        hw++;
+        $hb.css({width:hw+'%'});
+        $sh.text(hw+'%');
       } else{
         clearInterval(play);//setInterval 해제
-
-        /* ********************************************************
-                2단계 : 페이지 전환 모션
-                $container : 슬라이드 아웃(jQuery Easing)
-                $bar : 페이드 아웃 
-        ************************************************************/
-
-        
-        
       }
     }
   }
-  move();
-  
+  movesh();
+
+    //함수 정의(css)
+    function movesc(){  
+      //모션 실행 함수
+      var cw = parseInt($sc.text());
+      var play = setInterval(status, 20);
+      function status(){
+        if(cw<skillScroe[1]){
+          cw++;
+          $cb.css({width:cw+'%'});
+          $sc.text(cw+'%');
+        } else{
+          clearInterval(play);//setInterval 해제
+        }
+      }
+    }
+    movesc();
+
+      //함수 정의(jQuery)
+  function movesq(){
+    var qw = parseInt($sq.text());
+    var play = setInterval(status, 20);
+    //모션 실행 함수
+    function status(){
+      if(qw<skillScroe[2]){
+        qw++;
+        $qb.css({width:qw+'%'});
+        $sq.text(qw+'%');
+      } else{
+        clearInterval(play);//setInterval 해제
+      }
+    }
+  }
+  movesq();
+
+  //함수 정의(Javascript)
+  function movess(){
+    var sw = parseInt($ss.text());
+    var play = setInterval(status, 20);
+    //모션 실행 함수
+    function status(){
+      if(sw<skillScroe[3]){
+        sw++;
+        $sb.css({width:sw+'%'});
+        $ss.text(sw+'%');
+      } else{
+        clearInterval(play);//setInterval 해제
+      }
+    }
+  }
+  movess();
+
+  //함수 정의(Vue.js)
+  function movesv(){
+    var vw = parseInt($sv.text());
+    var play = setInterval(status, 20);
+    //모션 실행 함수
+    function status(){
+      if(vw<skillScroe[4]){
+        vw++;
+        $vb.css({width:vw+'%'});
+        $sv.text(vw+'%');
+      } else{
+        clearInterval(play);//setInterval 해제
+      }
+    }
+  }
+  movesv();
 });
