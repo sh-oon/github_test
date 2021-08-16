@@ -38,12 +38,12 @@ a {text-decoration: none; color: #000;}
 /* //초기화 */
 
 /* sectioning */
-#header {width: 100%; height: 50px;}
-#introduce {width: 100%; height: 1080px;position: relative;}
-#career {width: 100%; height: 1080px;}
-#portfolio {width: 100%; height: 1080px;}
-#contact {width: 100%; height: 500px;}
-#footer {width: 100%; height: 100px;}
+#header {width: 100%; height: 50px; z-index: 12; background-color: #666;}
+#introduce {width: 100%; height: 1080px;position: relative; background-color: #888;}
+#career {width: 100%; height: 1080px; background-color: #999;}
+#portfolio {width: 100%; height: 1080px; background: #aaa;}
+#contact {width: 100%; height: 500px; background-color: #ccc;}
+#footer {width: 100%; height: 100px; background-color: #ddd;}
 
 .modal {display: none;}
 
@@ -53,19 +53,19 @@ a {text-decoration: none; color: #000;}
 #header {width: 100%; height: 50px; position: fixed; border-bottom: 1px solid; top: 0; left: 0;}
 .gnb {width: 1200px; height: 100%; margin: 0 auto;}
 .main {display: block; width: 100%; height: 100%;}
-.menu {display: block; width: 300px; height: 100%; text-align: center; font-size: 14px; box-sizing: border-box; line-height: 50px; border-left: 1px solid;}
+.menu {display: block; width: 300px; height: 100%; text-align: center; font-size: 14px; box-sizing: border-box; line-height: 50px; border-left: 1px solid; cursor: pointer;}
+.menu:hover {background-color: #ddd; transition: all 0.2s;}
 .menu:last-child {border-right: 1px solid;}
 /* fadeInUp/ 스크롤 감지하여 나타나는 모션 */
-.skill {
+.animate__fadeInUp {
   display: inline-block;
   margin: 0 0.5rem;
-
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 /* introduce */
-.typo {position: absolute; width: 1000px; height: 500px; top: 290px; left: 400px;}
+.typo {max-width: 1200px; height: 500px; display: flex; margin: 0 auto; padding-top: 290px;}
 .t-text {
   width: 100%;
   height: 100%;
@@ -77,6 +77,9 @@ a {text-decoration: none; color: #000;}
   padding: 50px;
 }
 
+/* stacks */
+.cc {width: 30.33%; height: 340px; float: left; background-color: #fff;}
+
 /* career */
 .history {width: 1200px; height: 540px; margin: 0 auto;}
 .skills {width: 1200px; height: 540px; margin: 0 auto; position: relative;}
@@ -87,6 +90,7 @@ a {text-decoration: none; color: #000;}
 .skills dd ul {display: block; width: 100%; height: 100%;}
 .skill {display: block; width: 100%; height: 20%; line-height: 68px;}
 .skill h3 {display: block; width: 20%; height: 100%; float: left;}
+.history h2 {display: block; width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
 
 
 /* 로딩바 */
