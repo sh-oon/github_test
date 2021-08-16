@@ -6,4 +6,5 @@ Design Profile
 
 1일차 - 프로토타이핑 (xd이용), html 뼈대설정
 2일차 - html 섹셔닝, css효과 및 js(fadeInUp 애니메이션, 로딩바, 타이핑애니메이션)
+3일차 - html 섹션 색상구분, 스킬바 구현, 로딩바 삭제, head부분 flex적용
 ## 
