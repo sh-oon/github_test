@@ -42,7 +42,7 @@ a {text-decoration: none; color: #000;}
 #introduce {width: 100%; height: 1080px;position: relative; background-color: #888;}
 #career {width: 100%; height: 1080px; background-color: #999;}
 #portfolio {width: 100%; height: 1080px; background: #aaa;}
-#contact {width: 100%; height: 500px; background-color: #ccc;}
+#contact {width: 100%; height: 1080px; background-color: #ccc;}
 #footer {width: 100%; height: 100px; background-color: #ddd;}
 
 .modal {display: none;}
@@ -121,8 +121,10 @@ a {text-decoration: none; color: #000;}
 /* portfolio */
 #portfolio h2 {display: block; width: 1200px; height: 50px; text-align: center; line-height: 50px; margin: 0 auto;}
 .p_wrap {width: 1200px; height: 1030px; margin: 0 auto;}
-.p_con {width: 50%; height: 500px; float: left; background-color: rgba(0,0,0,0);}
-.p_con:hover {background-color: rgba(0,0,0,0.6); animation: fadein .2s;}
+.p_con {width: 50%; height: 500px; float: left; background-color: rgba(0,0,0,0); position: relative;}
+.p1, .p2 {margin-bottom: 30px;}
+.p_cover {width: 100%; height: 100%; position: absolute; top: 0; left: 0; font-size: 30px; text-align: center; line-height: 500px; color: rgba(0,0,0,0); border-radius: 25px;}
+.p_cover:hover {background-color: rgba(0,0,0,0.6); color: #ccc; animation: fadein .2s;}
 @keyframes fadein {
   from {
       opacity: 0;
@@ -131,9 +133,51 @@ a {text-decoration: none; color: #000;}
       opacity: 1;
   }
 }
-.p_link {display: block; width: 100%; height: 100%;}
+.p_link {display: block; width: 100%; height: 100%; font-size: 0; background-position: center; background-size: cover;}
+.p2 a {background-image: url(../images/cafeerip.png);}
 
 /* contact */
 .contact_wrap {width: 1200px; height: 500px; position: relative; margin: 0 auto;}
+.comment_wrap {width: 1200px; height: 500px; position: relative; margin: 0 auto;}
+.comment_wrap h2 {display: block; width: 20%; height: 100%; float: left; border: 1px solid; box-sizing: border-box; line-height: 500px; text-align: center;}
+.comment_wrap p {width: 80%; height: 100%; float: left;}
 .contact_wrap h2 {display: block; width: 20%; height: 100%; float: left; border: 1px solid; box-sizing: border-box; line-height: 500px; text-align: center;}
 .con_method {width: 80%; height: 100%; float: left;}
+
+/* footer */
+#footer {font-size: 20px; color: #ddd; background-color: #555; text-align: center; line-height: 100px;}
+
+
+/* 모달레이어 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  overflow: auto;
+}
+
+.m-con {
+  background: #eee;
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+  border: 1px solid #555;
+}
+
+.m-con .close{
+  color: #999 ;
+  font-size: 24px;
+  font-weight: bold;
+  float: right;
+}
+.m-con .close:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+/* 모달 창 위치 조정 및 숨기기 */
+.modal {padding-top: 200px; display: none;}
