@@ -118,3 +118,51 @@ $(function(){
   }
   movesv();
 });
+
+
+//모달레이어
+
+$(function(){
+  var modal = $('.modal');
+  var close = $('.close');
+  var btn = $('#btn');
+
+  btn.click(function(){
+    modal.css({display : 'block'});
+  });
+
+  close.click(function(){
+    modal.css({display:'none'});
+  });
+});
+
+//아무곳이나 클릭하면 모달 레이어 숨기기
+var modal = document.getElementsByClassName('modal')
+window.onclick = function (e) {
+  if(e.target == modal[0]){
+    modal[0].style.display = 'none'
+    }
+}
+
+//faq 자기소개서 스크롤토글
+$(document).ready(function(){
+  $('.qna_title').click(function(){
+    var qa = $(this).next("div");
+    var open = $(this).children("button");
+    
+    if( qa.is(":visible")){
+      qa.slideUp();
+      open.removeClass('on');
+    } else{
+      qa.slideDown();
+      open.addClass('on');
+    }
+  });
+});
+
+$(document).ready(function() {
+  var divHeight = $('.faq').height(); 
+  var dh = $('.faq').height(); 
+  $('.comment_wrap > h2').css('min-height', divHeight+'px');
+  $('.comment_wrap').css('min-height', dh+'px');
+}); 
