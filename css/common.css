@@ -186,9 +186,3 @@ a {text-decoration: none; color: #000;}
 /* 모달 창 위치 조정 및 숨기기 */
 .modal {padding-top: 200px; display: none;}
 
-
-/* fadeInUp */
-.fadeinup {
-  margin-bottom:-300px;
-  max-width:100%;
-}
