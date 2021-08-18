@@ -166,3 +166,84 @@ $(document).ready(function() {
   $('.comment_wrap > h2').css('min-height', divHeight+'px');
   $('.comment_wrap').css('min-height', dh+'px');
 }); 
+
+$(document).ready(function(){
+  $('.p_con').mouseover(function(){
+    $(this).children("div").css({
+      "background-color":"rgba(0,0,0,0.6)",
+      "opacity" : 1,
+      "color" : "#ccc",
+      "transition" : "all .2s"
+    });
+  });
+  $('.p_con').mouseout(function(){
+    $(this).children("div").css({
+      "opacity" : 0
+    })
+  })
+});
+
+//nav 위치이동
+$(document).ready(function(){
+  var introduce = $('#introduce').offset(); //선택한 태그의 위치를 환
+  var career = $('#career').offset();
+  var portfolio = $('#portfolio').offset();
+  var contact = $('#contact').offset();
+  
+	$('.m1').click(function(){
+        $('html').animate({scrollTop : introduce.top - 50}, 400);
+	});
+	$('.m2').click(function(){
+        $('html').animate({scrollTop : career.top - 50}, 400);
+	});
+	$('.m3').click(function(){
+        $('html').animate({scrollTop : portfolio.top - 50}, 400);
+	});
+	$('.m4').click(function(){
+        $('html').animate({scrollTop : contact.top - 50}, 400);
+	});
+});
+
+var lastScrollTop = 0,
+
+    delta = 15;
+
+  $(window).scroll(function(event) {
+
+    var st = $(this).scrollTop();
+
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+
+    if ((st > lastScrollTop) && (lastScrollTop > 50)) {
+
+      $("#header").css({
+
+        "transition": "background-color 0.2s",
+        "background-color": "rgba(255,255,255,1)",
+        "box-shadow" : "0 5px 20px rgba(0, 0, 0, 0.8)"
+
+      });
+      $('#logo img:nth-child(1)').removeClass('on');
+      $('#logo img:nth-child(2)').addClass('on');
+      $('.opengnb span').css({"background-color":"#000"})
+      $('.tnb li a').css({"color":"#000"})
+
+    } else if((st<lastScrollTop) && (lastScrollTop < 50)) {
+
+      $("#header").css({
+
+        "top": "0",
+        "transition": "background-color 0.2s",
+        "background-color": "rgba(255, 255, 255, 0)",
+        "box-shadow" : "0 5px 20px rgba(0, 0, 0, 0)"
+      });
+      $('#logo img:nth-child(2)').removeClass('on');
+      $('#logo img:nth-child(1)').addClass('on');
+      $('.opengnb span').css({"background-color":"#fff"})
+      $('.tnb li a').css({"color":"#fff"})
+
+    }
+
+    lastScrollTop = st;
+
+  });
