@@ -247,3 +247,45 @@ var lastScrollTop = 0,
     lastScrollTop = st;
 
   });
+
+
+  //애니메이션 등장
+  $(function(){
+
+    var $offset = 1000;
+    var $history = $('.history');
+    var $skill = $('.skills');
+    var $historyOST = $history.offset().top - $offset;
+    var $skillOST = $skill.offset().top - $offset;
+    var $p1OST = $('.p1').offset().top - $offset;
+    var $p2OST = $('.p2').offset().top - $offset;
+    var $p3OST = $('.p3').offset().top - $offset;
+    var $commentOST = $('.comment_wrap').offset().top - $offset
+    var $contactOST = $('.contact_wrap').offset().top - $offset
+
+    $(window).scroll(function(){
+      if($(this).scrollTop() > $historyOST) {
+        $history.addClass('animate__fadeInUp');
+      }
+      if ($(this).scrollTop() > $skillOST) {
+        $skill.addClass('animate__fadeInUp');
+      }
+      if ($(this).scrollTop() > $p1OST) {
+        $('.p1').addClass('animate__fadeInUp');
+      }
+      if ($(this).scrollTop() > $p2OST) {
+        $('.p2').addClass('animate__fadeInUp');
+      }
+      if ($(this).scrollTop() > $p3OST) {
+        $('.p3').addClass('animate__fadeInUp');
+      }
+      if ($(this).scrollTop() > $commentOST) {
+        $('.comment_wrap').addClass('animate__fadeInUp');
+      }
+      if ($(this).scrollTop() > $contactOST) {
+        $('.contact_wrap').addClass('animate__fadeInUp');
+      }
+    });
+    
+    
+  });
