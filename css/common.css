@@ -47,8 +47,8 @@ a {text-decoration: none; color: #000;}
 /* //초기화 */
 
 /* sectioning */
-#header {width: 100vh; height: 50px; z-index: 12; background-color: #666;}
-#introduce {width: 100%; height: 100vh;position: relative; background-color: #fff;}
+#header {width: 100%; height: 100px; z-index: 12;}
+#introduce {width: 100%; height: 1080px;position: relative; background-color: #fff;}
 #career {width: 100%; height: 1080px; background-color: #999;}
 #portfolio {width: 100%; height: 1080px; background: #aaa;}
 #contact {width: 100%; height: auto; background-color: #ccc;}
@@ -59,10 +59,10 @@ a {text-decoration: none; color: #000;}
 
 
 /* header(nav) */
-#header {width: 100%; height: 50px; position: fixed; top: 0; left: 0;}
-.gnb {width: 1200px; height: 100%; margin: 0 auto;}
+#header {position: fixed; top: 0; left: 0;}
+.gnb {max-width: 1200px; height: 100%; margin: 0 auto;}
 .main {display: block; width: 100%; height: 100%;}
-.menu {display: block; width: 25%; height: 100%; text-align: center; font-size: 14px; box-sizing: border-box; line-height: 30px;cursor: pointer; padding: 10px 0;}
+.menu {display: block; width: 25%; height: 100%; text-align: center; font-size: 14px; box-sizing: border-box; line-height: 80px;cursor: pointer; padding: 10px 0;}
 .menu:hover {background-color: #ddd; transition: all 0.2s;}
 
 
@@ -79,7 +79,6 @@ a {text-decoration: none; color: #000;}
 .t-text {
   width: 100%;
   height: 100%;
-  border: 1px solid gray;
   text-align: justify;
   line-height: 400px;
   display: none;
@@ -91,16 +90,16 @@ a {text-decoration: none; color: #000;}
 .cc {width: 33.33%; height: 340px; float: left; background-color: #fff; margin: 0; padding: 0 10px;}
 
 /* career */
-.history {width: 1200px; height: 540px; margin: 0 auto; display: block;}
-.skills {width: 1200px; height: 540px; margin: 0 auto; position: relative; display: block;}
-.skills h2 {display: block; width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
+.history {max-width: 1200px; height: 540px; margin: 0 auto; display: block;}
+.skills {max-width: 1200px; height: 540px; margin: 0 auto; position: relative; display: block;}
+.skills h2 {display: block; max-width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
 .skills dl {display: block; width: 100%; height: 340px; margin-top: 50px;}
 .skills dt {display: block; width: 10%; height: 100%; float: left;}
 .skills dd {display: block; width: 90%; height: 100%; float: left;}
 .skills dd ul {display: block; width: 100%; height: 100%;}
 .skill {display: block; width: 100%; height: 20%; line-height: 68px;}
 .skill h3 {display: block; width: 10%; height: 100%; float: left;}
-.history h2 {display: block; width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
+.history h2 {display: block; max-width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
 
 
 /* 로딩바 */
@@ -129,16 +128,16 @@ a {text-decoration: none; color: #000;}
 }
 
 /* portfolio */
-#portfolio h2 {display: block; width: 1200px; height: 50px; text-align: center; line-height: 50px; margin: 0 auto;}
-.p_wrap {width: 1200px; height: 1030px; margin: 0 auto;}
+#portfolio h2 {display: block; max-width: 1200px; height: 50px; text-align: center; line-height: 50px; margin: 0 auto;}
+.p_wrap {max-width: 1200px; height: 1030px; margin: 0 auto;}
 .p_con {width: 50%; height: 500px; float: left; background-color: rgba(0,0,0,0); position: relative;}
 .p1, .p2 {margin-bottom: 30px;}
 .p_cover {width: 100%; height: 100%; position: absolute; top: 0; left: 0; font-size: 30px; text-align: center; line-height: 500px; color: rgba(0,0,0,0); border-radius: 25px;}
-.p_link {display: block; width: 100%; height: 100%; font-size: 0; background-position: center; background-size: cover;}
+.p_link {display: block; width: 100%; height: 100%; font-size: 0; background-position: center; background-size: contain; background-repeat: no-repeat;}
 .p2 a {background-image: url(../images/cafeerip.png);}
 
 /* contact */
-.comment_wrap {width: 1200px; min-height: 500px; height: auto; position: relative; margin: 0 auto; box-sizing: border-box; display: block;}
+.comment_wrap {max-width: 1200px; min-height: 500px; height: auto; position: relative; margin: 0 auto; box-sizing: border-box; display: block;}
 .comment_wrap h2 {display: block; width: 20%; height: auto; float: left; padding: 70px 0;}
 .con_method {width: 80%; height: 100%; float: left; padding: 70px 0;}
 .qna_answer {display: none;}
@@ -148,7 +147,7 @@ a {text-decoration: none; color: #000;}
 .qna_title {margin: 0; display: block; height: 70px; line-height: 70px;  border-bottom: 1px solid; cursor: pointer;}
 .op_answer {width: 50px; height: 50px; position: absolute; right: 0; margin-top: 10px; background-color: #888; border: none; background: url(../images/slideDown.png) center; background-size: cover; cursor: pointer;}
 .op_answer.on{background: url(../images/slideUp.png) center; background-size: cover; cursor: pointer;}
-.contact_wrap {width: 1200px; height: auto; position: relative; margin: 0 auto;display: block;}
+.contact_wrap {max-width: 1200px; height: auto; position: relative; margin: 0 auto;display: block;}
 .contact_wrap h2 {display: block; width: 20%; height: 100%; float: left; box-sizing: border-box; padding: 70px 0;}
 .cm {display: block; width: 100%; height: 50px; font-size: 14px;}
 .cm i {display: block; width: 10%; float: left; height: 100%;text-align: center;}
@@ -172,6 +171,7 @@ a {text-decoration: none; color: #000;}
   overflow: auto;
   overflow-y: hidden;
 }
+.adererror, .cafeerip, .profile {display: none;}
 
 .m_con {
   background: #eee;
@@ -199,6 +199,62 @@ a {text-decoration: none; color: #000;}
   cursor: pointer;
 }
 
-/* 모달 창 위치 조정 및 숨기기 */
-.modal {display: block;}
+/* 모바일 레이아웃 */
+.mo_gnb {width: 100%; height: 100vh; position: fixed; z-index: 100; background: rgba(0,0,0,0.5); display: none;}
+/* 모바일 메뉴버튼 */
+.mb { display : inline-block ; width : 20px ; height : 23px ; position : absolute ; top : 13px ; left: 10px ; background : none ; cursor : pointer; border-bottom: none; z-index: 1999;}
+.mb span {display : inline-block ; position : absolute ; left : 0 ; width : 100% ; height : 1px ; background-color : #333 ; transition : ease-out .2s ; transform-origin : center center}
+.mb span:nth-child(1) {top: 5px;}
+.mb span:nth-child(2) {top: 11px;}
+.mb span:nth-child(3) {top: 17px;}
+.mb.on span:nth-child(1) {transform: rotate(45deg); top: 11px;}
+.mb.on span:nth-child(2) {left: 50%; width: 0;}
+.mb.on span:nth-child(3) { transform: rotate(-45deg); top: 11px;}
+/* 모바일 메뉴창 */
+.mo_gnb_wrap {width: 60vw; height: 100%; background: #eee; position: relative;}
+.mo_menu_wrap {width: 90%; height: 38vh;position: relative; padding-top: 100px; padding-left: 10px;}
+.mo_menu {width: 100%; height: 50px; line-height: 50px;}
+.mo_menu:last-child {border-bottom: 3px solid #999;}
+.mo_tnb_wrap {width: 100%; height: 40%; padding-left: 10px;}
+.mo_tnb {display: block; width: 3vh; height: 3vh; text-align: center;line-height: 3vh;}
+.mb, .mo_gnb {display: none;}
 
+@keyframes menuSlide {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60vh;
+  }
+}
+
+
+.mo_skills {width: 100%; display: none;}
+.mo_skills h2 {display: block; height: 100px; text-align: center;}
+.mo_skills ul {width: 100%; height: 40vh;}
+.mo_skill {width: 48vw; height: 38vw; text-align: center; box-sizing: border-box;}
+
+@media only screen and (max-width:767px) {
+  #header {display: none;}
+  .mb{display: block;}
+  .typo {height: 100%; position: absolute;}
+  .t-text {line-height: 1.5;}
+  .gnb {display: none; width: 100%; max-width: 100%;}
+
+  .history {height: 40vh;}
+  .cc {height: 200px;}
+  .skills {display: none;}
+  .mo_skills {display: block;}
+  .p_con {width: 100%; height: 30vh;}
+  .p_cover {line-height: 30vh;}
+  .comment_wrap h2 {width: 80%; height: 50px; padding: 20px;padding-top: 50px; text-align: left;border-bottom: 5px double; margin: 0 auto; float: none;}
+  .faq {float: none; margin: 0 auto;}
+  .qna_title {font-size: 13px;}
+  .op_answer {width: 30px; height: 30px; margin-top: 20px;}
+  .qna_answer {font-size: 13px;}
+
+  /* contact_Wrap */
+  .contact_wrap h2 {width: 80%; height: 50px; padding: 20px; text-align: left; border-bottom: 5px double; margin: 0 auto; float: none; padding-top: 50px;}
+  .con_method {float: none; margin: 0 auto; padding-top: 30px;}
+  #footer {height: 50px; font-size: 15px; line-height: 50px;}
+}
