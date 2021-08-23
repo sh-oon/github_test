@@ -19,117 +19,45 @@ $(function(){
 });
 
 
-$(function(){
-
-  var skillScroe = [80,80,70,60,40]
-  var $hb = $('.html_bar')
-  var $cb = $('.css_bar')
-  var $qb = $('.jquery_bar')
-  var $sb = $('.js_bar')
-  var $vb = $('.vue_bar')
-  var $sh = $('.sh');
-  var $sc = $('.sc');
-  var $sq = $('.sq');
-  var $ss = $('.ss');
-  var $sv = $('.sv');
-  
-  //함수 정의(html)
-  function movesh(){
-    //모션 실행 함수
-    var hw = parseInt($sh.text());
-    var play = setInterval(status, 20);
-    function status(){
-      if(hw<skillScroe[0]){
-        hw++;
-        $hb.css({width:hw+'%'});
-        $sh.text(hw+'%');
-      } else{
-        clearInterval(play);//setInterval 해제
-      }
-    }
-  }
-  movesh();
-
-    //함수 정의(css)
-    function movesc(){  
-      //모션 실행 함수
-      var cw = parseInt($sc.text());
-      var play = setInterval(status, 20);
-      function status(){
-        if(cw<skillScroe[1]){
-          cw++;
-          $cb.css({width:cw+'%'});
-          $sc.text(cw+'%');
-        } else{
-          clearInterval(play);//setInterval 해제
-        }
-      }
-    }
-    movesc();
-
-      //함수 정의(jQuery)
-  function movesq(){
-    var qw = parseInt($sq.text());
-    var play = setInterval(status, 20);
-    //모션 실행 함수
-    function status(){
-      if(qw<skillScroe[2]){
-        qw++;
-        $qb.css({width:qw+'%'});
-        $sq.text(qw+'%');
-      } else{
-        clearInterval(play);//setInterval 해제
-      }
-    }
-  }
-  movesq();
-
-  //함수 정의(Javascript)
-  function movess(){
-    var sw = parseInt($ss.text());
-    var play = setInterval(status, 20);
-    //모션 실행 함수
-    function status(){
-      if(sw<skillScroe[3]){
-        sw++;
-        $sb.css({width:sw+'%'});
-        $ss.text(sw+'%');
-      } else{
-        clearInterval(play);//setInterval 해제
-      }
-    }
-  }
-  movess();
-
-  //함수 정의(Vue.js)
-  function movesv(){
-    var vw = parseInt($sv.text());
-    var play = setInterval(status, 20);
-    //모션 실행 함수
-    function status(){
-      if(vw<skillScroe[4]){
-        vw++;
-        $vb.css({width:vw+'%'});
-        $sv.text(vw+'%');
-      } else{
-        clearInterval(play);//setInterval 해제
-      }
-    }
-  }
-  movesv();
-});
-
 
 //모달레이어
 
-$(function(){
-  var ww = $(window).width();
+$(window).ready(function(){
   var modal = $('.modal');
   var close = $('.close');
   var p1 = $('.p1');
   var p2 = $('.p2');
   var p3 = $('.p3');
+  var ww = $(window).width();
+  
+  p1.click(function(){
+    if (ww < 767){
+    $('.modal.adererror').css({display : 'none'});
+    location.href = 'http://wooreeweb.com/pf/2614/profile/sub1.html'
+  } else {
+    $('.modal.adererror').css({display : 'block'});
+  };
+  });
 
+  p2.click(function(){
+    if (ww < 767){
+      $('.modal.cafeerip').css({display : 'none'});
+      location.href = 'http://wooreeweb.com/pf/2614/profile/sub2.html'
+    } else{
+      $('.modal.cafeerip').css({display : 'block'});
+    };
+  });
+
+  p3.click(function(){
+    if (ww < 767){
+      $('.modal.profile').css({display : 'none'});
+    }else{
+      $('.modal.profile').css({display : 'block'});
+    };
+  });
+  $(window).resize(function(){
+    ww = $(window).width();
+    
   p1.click(function(){
     if (ww < 767){
     $('.modal.adererror').css({display : 'none'});
@@ -153,6 +81,8 @@ $(function(){
       $('.modal.profile').css({display : 'block'});
     };
   });
+  
+});
 
 
   close.click(function(){
@@ -160,15 +90,21 @@ $(function(){
   });
 
   
+  var modal = document.getElementsByClassName('modal')
+  window.onclick = function (e) {
+    if(e.target == modal[0]){
+      modal[0].style.display = 'none'
+      }
+    if(e.target == modal[1]){
+      modal[1].style.display = 'none'
+      }
+    if(e.target == modal[2]){
+      modal[2].style.display = 'none'
+      }
+  }
 });
 
 //아무곳이나 클릭하면 모달 레이어 숨기기
-var modal = document.getElementsByClassName('modal')
-window.onclick = function (e) {
-  if(e.target == modal[0]){
-    modal[0].style.display = 'none'
-    }
-}
 
 //faq 자기소개서 스크롤토글
 $(document).ready(function(){
@@ -216,19 +152,28 @@ $(document).ready(function(){
   var portfolio = $('#portfolio').offset();
   var contact = $('#contact').offset();
   
-	$('.m1').click(function(){
+	$('.m1, .mm1').click(function(){
         $('html').animate({scrollTop : introduce.top - 50}, 400);
 	});
-	$('.m2').click(function(){
+	$('.m2, .mm2').click(function(){
         $('html').animate({scrollTop : career.top - 50}, 400);
 	});
-	$('.m3').click(function(){
+	$('.m3, .mm3').click(function(){
         $('html').animate({scrollTop : portfolio.top - 50}, 400);
 	});
-	$('.m4').click(function(){
+	$('.m4, .mm4').click(function(){
         $('html').animate({scrollTop : contact.top - 50}, 400);
 	});
 });
+
+var menuOut = document.getElementsByClassName('mo_gnb')
+var mg = document.getElementsByClassName('mb.on')
+window.onclick = function (e) {
+  if(e.target == menuOut[0]){
+    menuOut[0].style.display = 'none';
+    $('.mb').removeClass('on');
+    }
+}
 
 var lastScrollTop = 0,
 
@@ -296,6 +241,105 @@ var lastScrollTop = 0,
       }
       if ($(this).scrollTop() > $skillOST) {
         $skill.addClass('animate__fadeInUp');
+        $(function(){
+
+          var skillScroe = [80,80,70,60,40]
+          var $hb = $('.html_bar')
+          var $cb = $('.css_bar')
+          var $qb = $('.jquery_bar')
+          var $sb = $('.js_bar')
+          var $vb = $('.vue_bar')
+          var $sh = $('.sh');
+          var $sc = $('.sc');
+          var $sq = $('.sq');
+          var $ss = $('.ss');
+          var $sv = $('.sv');
+          
+          //함수 정의(html)
+          function movesh(){
+            //모션 실행 함수
+            var hw = parseInt($sh.text());
+            var play = setInterval(status, 20);
+            function status(){
+              if(hw<skillScroe[0]){
+                hw++;
+                $hb.css({width:hw+'%'});
+                $sh.text(hw+'%');
+              } else{
+                clearInterval(play);//setInterval 해제
+              }
+            }
+          }
+          movesh();
+        
+            //함수 정의(css)
+            function movesc(){  
+              //모션 실행 함수
+              var cw = parseInt($sc.text());
+              var play = setInterval(status, 20);
+              function status(){
+                if(cw<skillScroe[1]){
+                  cw++;
+                  $cb.css({width:cw+'%'});
+                  $sc.text(cw+'%');
+                } else{
+                  clearInterval(play);//setInterval 해제
+                }
+              }
+            }
+            movesc();
+        
+              //함수 정의(jQuery)
+          function movesq(){
+            var qw = parseInt($sq.text());
+            var play = setInterval(status, 20);
+            //모션 실행 함수
+            function status(){
+              if(qw<skillScroe[2]){
+                qw++;
+                $qb.css({width:qw+'%'});
+                $sq.text(qw+'%');
+              } else{
+                clearInterval(play);//setInterval 해제
+              }
+            }
+          }
+          movesq();
+        
+          //함수 정의(Javascript)
+          function movess(){
+            var sw = parseInt($ss.text());
+            var play = setInterval(status, 20);
+            //모션 실행 함수
+            function status(){
+              if(sw<skillScroe[3]){
+                sw++;
+                $sb.css({width:sw+'%'});
+                $ss.text(sw+'%');
+              } else{
+                clearInterval(play);//setInterval 해제
+              }
+            }
+          }
+          movess();
+        
+          //함수 정의(Vue.js)
+          function movesv(){
+            var vw = parseInt($sv.text());
+            var play = setInterval(status, 20);
+            //모션 실행 함수
+            function status(){
+              if(vw<skillScroe[4]){
+                vw++;
+                $vb.css({width:vw+'%'});
+                $sv.text(vw+'%');
+              } else{
+                clearInterval(play);//setInterval 해제
+              }
+            }
+          }
+          movesv();
+        });
       }
       if ($(this).scrollTop() > $p1OST) {
         $('.p1').addClass('animate__fadeInUp');
@@ -320,18 +364,17 @@ var lastScrollTop = 0,
     
   });
 
-
-  //모바일 메뉴버튼
+      //모바일 메뉴버튼
   $(function(){
-
     $('.mb').click(function(){
       $('.mb').toggleClass('on');
-      if ($('.mb').hasClass("on")){
+      if ($('.mb').hasClass('on')){
         $('.mo_gnb').css({"display": "block"});
-        $('.mo_gnb_wrap').css({"transition" : "menuSlide .2s ease-in"})
+ 
       } else {
         $('.mo_gnb').css({"display" : "none"});
       };
-      
+ 
     });
   });
+    
