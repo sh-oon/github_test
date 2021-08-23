@@ -1,3 +1,4 @@
+@charset "utf-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, a, dl, dt, dd, ol, ul, li, footer, header
 {
@@ -43,16 +44,23 @@ a {text-decoration: none; color: #000;}
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'EliceDigitalBaeum_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
 * {font-family: 'Noto Sans KR', sans-serif;}
 /* //초기화 */
 
 /* sectioning */
 #header {width: 100%; height: 100px; z-index: 12;}
-#introduce {width: 100%; height: 1080px;position: relative; background-color: #fff;}
-#career {width: 100%; height: 1080px; background-color: #999;}
-#portfolio {width: 100%; height: 1080px; background: #aaa;}
-#contact {width: 100%; height: auto; background-color: #ccc;}
-#footer {width: 100%; height: 100px; background-color: #ddd;}
+#introduce {width: 100%; height: 100vh;position: relative; background-color: #f4efdc;}
+#career {width: 100%; background-color: #f4efdc;}
+#portfolio {width: 100%; height: 1200px; background: #f4efdc;}
+#contact {width: 100%; height: auto; background-color: #f4efdc;}
+#footer {width: 100%; height: 100px; background-color: #f4efdc;}
 
 .modal {display: none;}
 
@@ -80,10 +88,12 @@ a {text-decoration: none; color: #000;}
   width: 100%;
   height: 100%;
   text-align: justify;
-  line-height: 400px;
+  line-height: 30vh;
   display: none;
   box-sizing: border-box;
   padding: 50px;
+  font-size: 5vh;
+  font-family: 'EliceDigitalBaeum_Bold';
 }
 
 /* stacks */
@@ -92,13 +102,18 @@ a {text-decoration: none; color: #000;}
 /* career */
 .history {max-width: 1200px; height: 540px; margin: 0 auto; display: block;}
 .skills {max-width: 1200px; height: 540px; margin: 0 auto; position: relative; display: block;}
-.skills h2 {display: block; max-width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
+.skills h2 {display: block; max-width: 500px; height: 50px; text-align: center; margin: 0 auto; line-height: 50px;}
 .skills dl {display: block; width: 100%; height: 340px; margin-top: 50px;}
-.skills dt {display: block; width: 10%; height: 100%; float: left;}
+.skills dt {display: block; width: 10%; height: 100%; float: left; font-size: 0;}
 .skills dd {display: block; width: 90%; height: 100%; float: left;}
 .skills dd ul {display: block; width: 100%; height: 100%;}
-.skill {display: block; width: 100%; height: 20%; line-height: 68px;}
-.skill h3 {display: block; width: 10%; height: 100%; float: left;}
+.skill {display: block; width: 100%; height: 20%; line-height: 68px; margin: 2vh 0;}
+.skill h3 {display: block; width: 10%; height: 100%; float: left; font-size: 0;}
+.skill:nth-child(1) h3 {background: url(../images/html5.png) center no-repeat; background-size: contain;}
+.skill:nth-child(2) h3 {background: url(../images/css3.png) center no-repeat; background-size: contain;}
+.skill:nth-child(3) h3 {background: url(../images/jq.png) center no-repeat; background-size: contain;}
+.skill:nth-child(4) h3 {background: url(../images/js.png) center no-repeat; background-size: contain;}
+.skill:nth-child(5) h3 {background: url(../images/vue.png) center no-repeat; background-size: contain;}
 .history h2 {display: block; max-width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
 
 
@@ -116,25 +131,47 @@ a {text-decoration: none; color: #000;}
   background-color: transparent;
 }
 .bar {
-  background-color: blue;
+  background-color: #365FB7;
   width: 0;
-  height: 100%;
+  height: 50%;
+  border-radius: 50px;
 }
 .label {
   text-align: center;
   color: #fff;
   letter-spacing: 2px;
-  line-height: 30px;
+  line-height: 15px;
+  font-size: 8px;
 }
 
 /* portfolio */
-#portfolio h2 {display: block; max-width: 1200px; height: 50px; text-align: center; line-height: 50px; margin: 0 auto;}
-.p_wrap {max-width: 1200px; height: 1030px; margin: 0 auto;}
-.p_con {width: 50%; height: 500px; float: left; background-color: rgba(0,0,0,0); position: relative;}
-.p1, .p2 {margin-bottom: 30px;}
-.p_cover {width: 100%; height: 100%; position: absolute; top: 0; left: 0; font-size: 30px; text-align: center; line-height: 500px; color: rgba(0,0,0,0); border-radius: 25px;}
-.p_link {display: block; width: 100%; height: 100%; font-size: 0; background-position: center; background-size: contain; background-repeat: no-repeat;}
-.p2 a {background-image: url(../images/cafeerip.png);}
+#portfolio h2 {
+  display: block;
+  max-width: 1200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+}
+.p_wrap {
+  max-width: 1200px; 
+  height: 1030px; 
+  margin: 0 auto;
+}
+.p_con {
+  width: 44%; 
+  height: 500px;
+  float: left;
+  background-color: rgba(0,0,0,0);
+  position: relative;
+  margin: 0 3%;
+}
+.p1, .p2 {margin-bottom: 30px; margin-top: 30px;}
+.p_cover {width: 100%; height: 100%; position: absolute; top: 0; left: 0; font-size: 30px; text-align: center; line-height: 500px; color: rgba(0,0,0,0);}
+.p_link {display: block; width: 100%; height: 100%; font-size: 0; background-position: top; background-size: cover; background-repeat: no-repeat; border-radius: 25px; overflow: hidden;}
+.p1 a {background-image: url(../images/modal/adererror/index.jpg);}
+.p2 a {background-image: url(../images/modal/cafeerip/index.jpg);}
+.p3 a {background-image: url(../images/modal/adererror/sub1.jpg);}
 
 /* contact */
 .comment_wrap {max-width: 1200px; min-height: 500px; height: auto; position: relative; margin: 0 auto; box-sizing: border-box; display: block;}
@@ -166,7 +203,7 @@ a {text-decoration: none; color: #000;}
   left: 0;
   background-color: rgba(0,0,0,0.5);
   width: 100%;
-  height: 900px;
+  height: 100vh;
   z-index: 500;
   overflow: auto;
   overflow-y: hidden;
@@ -176,18 +213,35 @@ a {text-decoration: none; color: #000;}
 .m_con {
   background: #eee;
   padding: 20px;
-  width: 50%;
-  height: 900px;
+  width: 50vw;
+  height: 90vh;
   margin: 0 auto;
+  margin-top: 5vh;
   border: 1px solid #555;
   overflow-y: hidden;
 }
 .m_ing {
   text-align: center;
 }
-.m_ing p {display: block; width: 80%; height: 100%; text-align: left; margin: 0 auto;}
-
-
+.m_ing p {
+  display: block;
+  width: 40vw;
+  height: 100%;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-top: 3vw;
+}
+.m_ing > div {
+  width: 40vw;
+  height: 50vh;
+  background-size: contain;
+  margin: 0 auto;
+}
+.m_ad > div {background: url('../images/modal/adererror/index.jpg') center no-repeat; background-size: contain;}
+.m_ce > div {background: url('../images/modal/cafeerip/index.jpg') center no-repeat; background-size: contain;}
+.m_pr > div {background: url('../images/modal/adererror/index.jpg') center no-repeat; background-size: contain;}
+.m_ing a {display: block; width: 40vw; height: 10vh; line-height: 10vh; text-align: left; margin: 0 auto;}
 .m_con .close{
   color: #999 ;
   font-size: 24px;
@@ -202,7 +256,7 @@ a {text-decoration: none; color: #000;}
 /* 모바일 레이아웃 */
 .mo_gnb {width: 100%; height: 100vh; position: fixed; z-index: 100; background: rgba(0,0,0,0.5); display: none;}
 /* 모바일 메뉴버튼 */
-.mb { display : inline-block ; width : 20px ; height : 23px ; position : absolute ; top : 13px ; left: 10px ; background : none ; cursor : pointer; border-bottom: none; z-index: 1999;}
+.mb { display : inline-block ; width : 20px ; height : 23px ; position : fixed ; top : 13px ; left: 10px ; background : none ; cursor : pointer; border-bottom: none; z-index: 1999;}
 .mb span {display : inline-block ; position : absolute ; left : 0 ; width : 100% ; height : 1px ; background-color : #333 ; transition : ease-out .2s ; transform-origin : center center}
 .mb span:nth-child(1) {top: 5px;}
 .mb span:nth-child(2) {top: 11px;}
@@ -211,41 +265,55 @@ a {text-decoration: none; color: #000;}
 .mb.on span:nth-child(2) {left: 50%; width: 0;}
 .mb.on span:nth-child(3) { transform: rotate(-45deg); top: 11px;}
 /* 모바일 메뉴창 */
-.mo_gnb_wrap {width: 60vw; height: 100%; background: #eee; position: relative;}
-.mo_menu_wrap {width: 90%; height: 38vh;position: relative; padding-top: 100px; padding-left: 10px;}
+.mo_gnb_wrap {width: 60vw; height: 100vh; background: #eee; position: relative; animation: menuSlide .2s;}
+.mo_gnb_wrap.menuSlide {animation: menuClose .2s;}
+.mo_menu_wrap {width: 100%; position: relative; padding: 0 10px; padding-top: 10vh;}
 .mo_menu {width: 100%; height: 50px; line-height: 50px;}
 .mo_menu:last-child {border-bottom: 3px solid #999;}
-.mo_tnb_wrap {width: 100%; height: 40%; padding-left: 10px;}
-.mo_tnb {display: block; width: 3vh; height: 3vh; text-align: center;line-height: 3vh;}
+.mo_tnb_wrap {width: 100%; padding-left: 10px;}
+.mo_tnb {display: block; width: 3vh; height: 3vh; text-align: center;line-height: 3vh; margin: 3vh 0; margin-right: 2vh;}
 .mb, .mo_gnb {display: none;}
 
 @keyframes menuSlide {
   0% {
-    width: 0;
+    left: -100%;
   }
   100% {
-    width: 60vh;
+    left: 0;
+  }
+}
+@keyframes menuClose {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
   }
 }
 
-
-.mo_skills {width: 100%; display: none;}
-.mo_skills h2 {display: block; height: 100px; text-align: center;}
+.mo_skills {width: 100%; display: none; position: relative;}
+.mo_skills h2 {display: block; height: 10vh; text-align: center;}
 .mo_skills ul {width: 100%; height: 40vh;}
-.mo_skill {width: 48vw; height: 38vw; text-align: center; box-sizing: border-box;}
+.mo_skill {width: 48vw; height: 38vw; text-align: center; box-sizing: border-box; font-size: 0; margin: 3vh 0;}
+.mo_skill:nth-child(1) {background: url(../images/html5.png) no-repeat center; background-size: contain;}
+.mo_skill:nth-child(2) {background: url(../images/css3.png) no-repeat center; background-size: contain;}
+.mo_skill:nth-child(3) {background: url(../images/jq.png) no-repeat center; background-size: contain;}
+.mo_skill:nth-child(4) {background: url(../images/js.png) no-repeat center; background-size: contain;}
+.mo_skill:nth-child(5) {background: url(../images/vue.png) no-repeat center; background-size: contain;}
 
 @media only screen and (max-width:767px) {
   #header {display: none;}
+  #introduce {height: 100vh;}
   .mb{display: block;}
   .typo {height: 100%; position: absolute;}
   .t-text {line-height: 1.5;}
   .gnb {display: none; width: 100%; max-width: 100%;}
 
-  .history {height: 40vh;}
-  .cc {height: 200px;}
+
+  .cc {height: 200px; width: 80vw; margin: 5vw 10vw;}
   .skills {display: none;}
   .mo_skills {display: block;}
-  .p_con {width: 100%; height: 30vh;}
+  .p_con {width: 100%; height: 30vh; margin: 0;}
   .p_cover {line-height: 30vh;}
   .comment_wrap h2 {width: 80%; height: 50px; padding: 20px;padding-top: 50px; text-align: left;border-bottom: 5px double; margin: 0 auto; float: none;}
   .faq {float: none; margin: 0 auto;}
