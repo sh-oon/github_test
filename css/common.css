@@ -58,7 +58,7 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
 #header {width: 100%; height: 100px; z-index: 12;}
 #introduce {width: 100%; height: 100vh;position: relative; background-color: #f4efdc;}
 #career {width: 100%; background-color: #f4efdc;}
-#portfolio {width: 100%; height: 1200px; background: #f4efdc;}
+#portfolio {width: 100%; height: 150vh; background: #f4efdc; padding-top: 10vh;}
 #contact {width: 100%; height: auto; background-color: #f4efdc;}
 #footer {width: 100%; height: 100px; background-color: #f4efdc;}
 
@@ -70,7 +70,7 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
 #header {position: fixed; top: 0; left: 0;}
 .gnb {max-width: 1200px; height: 100%; margin: 0 auto;}
 .main {display: block; width: 100%; height: 100%;}
-.menu {display: block; width: 25%; height: 100%; text-align: center; font-size: 14px; box-sizing: border-box; line-height: 80px;cursor: pointer; padding: 10px 0;}
+.menu {display: block; width: 25%; height: 100%; text-align: center; font-size: 17px; box-sizing: border-box; line-height: 80px;cursor: pointer; padding: 10px 0;}
 .menu:hover {background-color: #ddd; transition: all 0.2s;}
 
 
@@ -83,12 +83,12 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
 }
 
 /* introduce */
-.typo {max-width: 1200px; display: flex; margin: 0 auto; padding-top: 290px;}
+.typo {max-width: 1200px; display: flex; margin: 0 auto; padding-top: 30vh;}
 .t-text {
   width: 100%;
   height: 100%;
   text-align: justify;
-  line-height: 30vh;
+  line-height: 10vh;
   display: none;
   box-sizing: border-box;
   padding: 50px;
@@ -105,7 +105,7 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
 /* career */
 .history {max-width: 1200px; height: 540px; margin: 0 auto; display: block;}
 .skills {max-width: 1200px; height: 540px; margin: 0 auto; position: relative; display: block;}
-.skills h2 {display: block; max-width: 500px; height: 50px; text-align: center; margin: 0 auto; line-height: 50px;}
+.skills h2 {display: block; max-width: 500px; height: 50px; text-align: center; margin: 0 auto; line-height: 50px; font-size: 30px;}
 .skills dl {display: block; width: 100%; height: 340px; margin-top: 50px;}
 .skills dt {display: block; width: 10%; height: 100%; float: left; font-size: 0;}
 .skills dd {display: block; width: 90%; height: 100%; float: left;}
@@ -117,7 +117,7 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
 .skill:nth-child(3) h3 {background: url(../images/jq.png) center no-repeat; background-size: contain;}
 .skill:nth-child(4) h3 {background: url(../images/js.png) center no-repeat; background-size: contain;}
 .skill:nth-child(5) h3 {background: url(../images/vue.png) center no-repeat; background-size: contain;}
-.history h2 {display: block; max-width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px;}
+.history h2 {display: block; max-width: 500px; height: 100px; text-align: center; margin: 0 auto; line-height: 100px; font-size: 30px;}
 
 
 /* 로딩바 */
@@ -155,6 +155,7 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
   text-align: center;
   line-height: 50px;
   margin: 0 auto;
+  font-size: 30px;
 }
 .p_wrap {
   max-width: 1200px; 
@@ -185,14 +186,16 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
 .qna {display: block; width: 100%; height: 20%; position: relative;}
 .qna_answer {position: relative; padding: 30px; line-height: 1.5;}
 .qna_title {margin: 0; display: block; height: 70px; line-height: 70px;  border-bottom: 1px solid; cursor: pointer;}
-.op_answer {width: 50px; height: 50px; position: absolute; right: 0; margin-top: 10px; background-color: #888; border: none; background: url(../images/slideDown.png) center; background-size: cover; cursor: pointer;}
-.op_answer.on{background: url(../images/slideUp.png) center; background-size: cover; cursor: pointer;}
+.op_answer {width: 15px; height: 15px; position: absolute; right: 10px; margin-top: 20px; cursor: pointer; box-sizing: border-box; border: 5px solid #666; transform: rotate(45deg); border-top: none; border-left: none; background-color: rgba(0,0,0,0); padding: 0;}
+.op_answer.on{transform: rotate(225deg);cursor: pointer;}
 .contact_wrap {max-width: 1200px; height: auto; position: relative; margin: 0 auto;display: block;}
 .contact_wrap h2 {display: block; width: 20%; height: 100%; float: left; box-sizing: border-box; padding: 70px 0;}
 .cm {display: block; width: 100%; height: 50px; font-size: 14px;}
 .cm i {display: block; width: 10%; float: left; height: 100%;text-align: center;}
 .cm a, .cm p {display: block; width: 90%; float: left; height: 100%; margin: 0;}
-.cm i, .cm a, .cm p{color: #666; cursor: pointer;}
+.cm i, .cm a, .cm p{color: #666; cursor: pointer; font-size: 14px;}
+
+
 
 
 /* footer */
@@ -259,22 +262,23 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
 /* 모바일 레이아웃 */
 .mo_gnb {width: 100%; height: 100vh; position: fixed; z-index: 100; background: rgba(0,0,0,0.5); display: none;}
 /* 모바일 메뉴버튼 */
-.mb { display : inline-block ; width : 20px ; height : 23px ; position : fixed ; top : 13px ; left: 10px ; background : none ; cursor : pointer; border-bottom: none; z-index: 1999;}
+.mb { display : inline-block ; width : 30px ; height : 30px ; position : fixed ; top : 13px ; left: 10px ; background : none ; cursor : pointer; border-bottom: none; z-index: 1999;}
 .mb span {display : inline-block ; position : absolute ; left : 0 ; width : 100% ; height : 1px ; background-color : #333 ; transition : ease-out .2s ; transform-origin : center center}
 .mb span:nth-child(1) {top: 5px;}
-.mb span:nth-child(2) {top: 11px;}
-.mb span:nth-child(3) {top: 17px;}
-.mb.on span:nth-child(1) {transform: rotate(45deg); top: 11px;}
+.mb span:nth-child(2) {top: 13px;}
+.mb span:nth-child(3) {top: 21px;}
+.mb.on span:nth-child(1) {transform: rotate(45deg); top: 13px;}
 .mb.on span:nth-child(2) {left: 50%; width: 0;}
-.mb.on span:nth-child(3) { transform: rotate(-45deg); top: 11px;}
+.mb.on span:nth-child(3) { transform: rotate(-45deg); top: 13px;}
 /* 모바일 메뉴창 */
 .mo_gnb_wrap {width: 60vw; height: 100vh; background: #eee; position: relative; animation: menuSlide .2s;}
 .mo_gnb_wrap.menuSlide {animation: menuClose .2s;}
-.mo_menu_wrap {width: 100%; position: relative; padding: 0 10px; padding-top: 10vh;}
-.mo_menu {width: 100%; height: 50px; line-height: 50px;}
-.mo_menu:last-child {border-bottom: 3px solid #999;}
+.mo_menu_wrap {width: 100%; position: relative; padding: 0 10px; padding-top: 20vh;}
+.mo_menu {width: 100%; height: 10vh; line-height: 50px; font-size: 25px;}
+.mo_menu:last-child {border-bottom: 3px solid #999; height: calc(10vh + 20px); padding-bottom: 20px;}
 .mo_tnb_wrap {width: 100%; padding-left: 10px;}
-.mo_tnb {display: block; width: 3vh; height: 3vh; text-align: center;line-height: 3vh; margin: 3vh 0; margin-right: 2vh;}
+.mo_tnb {display: block; width: 25%; height: 5vh; padding-left: 1vh; margin: 3vh 0; font-size: 25px;}
+.mo_tnb:nth-child(3) {font-size: 28px;}
 .mb, .mo_gnb {display: none;}
 
 @keyframes menuSlide {
@@ -309,7 +313,7 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
   #introduce {height: 100vh;}
   .mb{display: block;}
   .typo {height: 100%; position: absolute;}
-  .t-text {line-height: 1.5;}
+  .t-text {line-height: 1.5; font-size: 6vw;}
   .gnb {display: none; width: 100%; max-width: 100%;}
 
 
@@ -320,8 +324,8 @@ h2 {font-family: 'EliceDigitalBaeum_Bold'; font-size: 20px;}
   .p_cover {line-height: 30vh;}
   .comment_wrap h2 {width: 80%; height: 50px; text-align: left;border-bottom: 5px double; margin: 0 auto; float: none;}
   .faq {float: none; margin: 0 auto;}
-  .qna_title {font-size: 13px;}
-  .op_answer {width: 30px; height: 30px; margin-top: 20px;}
+  .qna_title {font-size: 13px; line-height: 17px;}
+  .op_answer {width: 15px; height: 15px; margin-top: 30px; position: absolute; top: 0;}
   .qna_answer {font-size: 13px;}
 
   .history {height: auto;}

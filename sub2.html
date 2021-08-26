@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="css/common.css?v08231759">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <!-- jQuery -->
   <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
@@ -14,11 +15,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <title>Project | Adererror</title>
   <style>
-          html,
-      body {
-        position: relative;
-        height: 100%;
-      }
 
       body {
         background: #eee;
@@ -62,9 +58,52 @@
         object-fit: contain;
       }
   </style>
+  <style>
+    .pr_comment {
+      width: 100vw; position: relative;
+      margin-bottom: 5vh;
+    }
+    .pr_comment h2 {
+      display: block;
+      width: 80vw;
+      margin: 0 auto;
+      font-size: 20px;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+    }
+    .pr_comment h3 {
+      display: block;
+      width: 80vw;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+    .pr_comment p {
+      display: block;
+      width: 80vw;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.3;
+      padding-top: 10%;
+    }
+    .pr_comment a {
+      display: block;
+      width: 80vw;
+      margin: 0 auto;
+      font-size: 12px;
+      line-height: 1.3;
+      padding-top: 10%;
+    }
+  </style>
   <script>
       //모바일 메뉴버튼
   $(function(){
+    var moGnb = document.getElementsByClassName('mo_gnb')
+    window.ontouchstart = function (e) {
+      if(e.target == moGnb[0]){
+        moGnb[0].style.display = 'none'
+        $('.mb').removeClass('on');
+        }
+      }
 
 $('.mb').click(function(){
   $('.mb').toggleClass('on');
@@ -77,6 +116,7 @@ $('.mb').click(function(){
   
 });
 });
+
 
   </script>
 </head>
@@ -95,17 +135,17 @@ $('.mb').click(function(){
           </i></a></li>
         <li class="mo_tnb left mm2">
           <a href="https://github.com/sh-oon/github_test.git">
-          <i class="fa fa-github" aria-hidden="true">
+          <i class="xi-github" aria-hidden="true">
           </i></a>
         </li>
         <li class="mo_tnb left mm3">
           <a href="tel:010-9737-2483">
-          <i class="fa fa-mobile" aria-hidden="true" >
+          <i class="xi-mobile" aria-hidden="true" >
           </i></a>
         </li>
         <li class="mo_tnb left mm4">
           <a href="#">
-          <i class="fa fa-home" aria-hidden="true">
+          <i class="xi-kakaotalk" aria-hidden="true">
           </i></a>
         </li>
       </ul>
@@ -134,40 +174,7 @@ $('.mb').click(function(){
       </div>
     </div>
   </section>
-  <style>
-    .pr_comment {
-      width: 100vw; height: 44vh; position: relative;
-    }
-    .pr_comment h2 {
-      display: block;
-      width: 80vw;
-      margin: 0 auto;
-      font-size: 20px;
-      padding-top: 5%;
-    }
-    .pr_comment h3 {
-      display: block;
-      width: 80vw;
-      margin: 0 auto;
-      font-size: 16px;
-    }
-    .pr_comment p {
-      display: block;
-      width: 80vw;
-      margin: 0 auto;
-      font-size: 16px;
-      line-height: 1.3;
-      padding-top: 10%;
-    }
-    .pr_comment a {
-      display: block;
-      width: 80vw;
-      margin: 0 auto;
-      font-size: 12px;
-      line-height: 1.3;
-      padding-top: 10%;
-    }
-  </style>
+
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
